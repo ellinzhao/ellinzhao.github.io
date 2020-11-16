@@ -1,0 +1,65 @@
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });
+    </script>
+    <link href="./style.css" rel="stylesheet">
+    <title>CS184 FP</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+	<h1 align="middle">Multi-sensor DiffuserCam</h1>
+	<h2 align="middle">CS 184: Final Project</h2>
+	<span class="date">Ellin Zhao, Team 92</span>
+
+	<div id="abstract">
+		<h3>Abstract <a href="https://github.com/ellinzhao/QuadCam">[Github repo]</a> <a href="https://www.youtube.com/watch?v=VhQnQymt7JE">[Showcase video]</a></h3>
+		<p>In this project, a multi-sensor lensless imaging pipeline and prototype is demonstrated. The prototype is built from commodity hardware and consists of a $2\times2$ array of camera sensors with a diffuser phase mask above the array. The use of a phase mask allows the system to image a large sensing area from a non-contiguous array of camera sensors by solving a compressive sensing inverse problem. Prototype calibration occurs in two stages, PSF acquisition and sensor orientation, both steps using standard computer vision methods to create a robust calibration scheme. The presented prototype provides a 5x increase in the lateral field-of-view (FoV), with the sensor array covering only 8.6% of the synthetic sensing area. </p>
+	</div>
+
+	<div>
+		<h3>Technical approach</h3>
+		<div class="row">
+	    <div class="column"> 
+	       <img src="./img/rpi.png" width=100% /> <figcaption>Raspberry Pi prototype.</figcaption>
+	    </div>
+	    <div class="column"> 
+	        <img src="./img/pipeline.png" width=80% /> <figcaption>Imaging pipeline.</figcaption>
+	    </div>
+		</div>
+		<p><b>PSF acquisition:</b> The imaging system is characterized by a caustic pattern created by a single on-axis point source; this pattern is called a point-spread function (PSF). When a point source in the scene is shifted, the sensor images a shifted PSF [1]. The synthetic sensing area is larger than the actual sensing area, so the PSF cannot be acquired in a single shot; instead, a single sensor images a laterally shifting point source and the resulting set of images is stitched together to obtain the full diffuser profile. Adjacent images contain overlapping sections of the diffuser and are related by a translational transform, suggesting that the images can be stitched using a cross correlation-based algorithm. Applying cross correlation (XC) on the raw images can sometimes fail because the background of the PSF is non-zero, and thus the cross correlation metric of similarity inaccurately increases as overlap area increases. To combat this, we preprocess the image to remove the background (using mean subtraction or edge detection [2]), and then proceed with cross correlation. </p>
+		<img src='./img/graphs.png' width=100%>
+		<img src='./img/bg_comparison.png' width=40%>
+		<br><br>
+		<p><b>Sensor orientation:</b> The sensor measurements must be oriented correctly relative to one another in order to reconstruct the scene. This problem is approached from an image registration perspective: each sensor in the array images an on-axis point source, obtaining a sub-PSF, and determining the sensor orientations is the same as registering the sub-PSFs against the full PSF. Many image registration methods exist [3], although feature-based and iterative intensity-based methods tend to fail in this case because of the size of the fixed image relative to the template image and the pseudorandom nature of the PSF. Due to the physical layout of the system, the sub-PSFs should be registered with only a rigid transformation. With $-\epsilon \leq \theta \leq \epsilon, 180 -\epsilon \leq \theta \leq 180 + \epsilon$, $\epsilon \approx 10^{\circ} $, $s$ as the sub-PSF and $t$ as the full PSF, the optimization problem below represents how we solve for sensor orientation:
+			$$ \hat{\theta} = \arg\!\max_{\theta} \left\{ \max_{i,j} \left\{ \text{NCC}(\text{rotate}(s, \theta), t) \right\} \right\} $$
+		With $s, t$ downsampled, we iterate within the search space for $\theta$ and find $\hat{\theta}$. Then, we use the normalized cross correlation (NCC) peak to find the optimal translation. NCC is used rather than cross correlation because the intensity changes between orientataion images and the PSF and NCC is known to handle intensity changes better [4]. This approach is actually faster than aforementioned registration methods because our search space of transformations is fairly small, and we can use a GPU to further optimize runtime. 
+		</p>
+	</div>
+
+	<div>
+		<h3>Results</h3>
+		<p>Scenes are recovered from the raw, oriented measurements by solving the following sparisity constrained inverse problem, where $\mathbf{v}$ is the estimated scene, $\mathbf{M}$ is the sensor mask, $\mathbf{H}$ is the optical forward model, and $\mathbf{\Psi}$ is a sparsifying transform (e.g. 2D TV): </p>
+		$$ \mathbf{\hat{v}} = \arg\!\min_{\mathbf{v} \geq 0} 
+		\frac{1}{2} \Vert \mathbf{v} - \mathbf{MHv} \Vert_2^2 + \tau \Vert \mathbf{\Psi v} \Vert_1
+		$$
+		<p>The above inverse problem is solved using 3000 iterations of the Fast Iterative Shrinkage-Thresholding Algorithm (FISTA) on a GPU. The results from this project are a working multi-sensor lensless imaging prototype that demonstrates an increased FoV, and the methods developed for the imaging pipeline. This pipeline is robust enough to handle different phase masks such as random lenslets, and different sensor configurations and spacings.</p>
+		<img src='./img/recons.png' width=40%>
+	</div>
+
+	<div>
+		<h3>References</h3>
+		<p>[1] N. Antipa et al., “DiffuserCam: lensless single-exposure 3D imaging,” Optica, vol. 5, no. 1, p. 1, Dec. 2017 <br>
+			[2] J. Canny, “A Computational Approach to Edge Detection,” IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. PAMI-8, no. 6, pp. 679–698, Nov. 1986. <br>
+			[3] F. Alam, et al., "An investigation towards issues and challenges in medical image registration," J Postgrad Med Inst 2017; 31(3): 224-33. <br>
+			[4] K. Briechle and U. D. Hanebeck, “Template matching using fast normalized cross correlation,” in Optical Pattern Recognition XII, 2001. <br>
+			[5] A. Beck and M. Teboulle, “A Fast Iterative Shrinkage-Thresholding Algorithm for Linear Inverse Problems,” SIAM Journal on Imaging Sciences, vol. 2, no. 1, pp. 183–202, Jan. 2009.
+		</p>
+	</div>
+	<br><br>
+
+</body>
+</html>
+
+
