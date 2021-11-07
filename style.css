@@ -1,118 +1,57 @@
-@font-face {
-    font-family: "Dank Mono";
-    src: url(assets/dank_mono.otf);
-}
-
-@font-face {
-    font-family: "Dank Mono";
-    font-style: italic;
-    src: url(assets/dank_mono.otf);
-}
-
-@font-face {
-    font-family: "Maison Mono";
-    src: url(assets/maisonneuemono.ttf);
-}
-
-@font-face {
-    font-family: "Maison Mono";
-    font-style: italic;
-    src: url(assets/maisonneuemonoitalic.ttf);
-}
-
-
 :root {
-    --text: rgb(72, 72, 82);
-    --background: rgb(255, 255, 255);
-    --accent1: rgb(188, 186, 227);
-    --accent2: rgb(248, 128, 99);
-    --accent3: rgb(245, 239, 224);
-    --border:3px dotted var(--accent1);
+    --text: #662D91;
+    --background: #FFFAFA;
+    --link-background: #FFFFFF;
+    --link-text: #0000FF;
+    --border: 3px dotted var(--text);
 }
 
-::selection {
-    background: var(--accent3);
+@font-face {
+    font-family: 'Dank Mono';
+    src: url('./font/dank_mono.ttf') format('truetype') font-weight-normal,
+         url('./font/dank_mono_italic.ttf') format('truetype') font-italic;
 }
 
 body {
-    font-family: "Maison Mono", "GT Pressura Mono", "Inconsolata", monospace;
-    padding: 60px 150px;
     background-color: var(--background);
     color: var(--text);
+    font-family: 'Dank Mono', 'Inconsolata', 'Courier', monospace;
+    font-size: 15px;
+    font-style: none;
+    margin: 70px;
 }
 
 a {
     color: inherit;
-    text-decoration: underline;
+    font-style: italic;
 }
 
-small a:hover {
-    font-weight: bolder;
-    color: var(--accent2);
-    text-decoration: underline;
-}
-
-.nav-link:hover, a:hover {
-    color: var(--text);
-    font-weight: bolder;
-    text-decoration: underline;
-}
-
-header {
-    margin-bottom: 60px;
-}
-
-.dash-border {
-    color: var(--accent1);
-    margin: 0 0 15px;
-    position: relative;
-    border-bottom: var(--border);
-}
-
-.dash-border:after {
-    content: "";
-    position: absolute;
-    bottom: 2px;
-    display: block;
-    width: 100%;
-    border-bottom: var(--border);
-}
-
-.navbar {
-    padding: 0;
+a:hover {
+    background-color: var(--link-text);
+    color: var(--link-background);
 }
 
 #name {
-    padding: 8px;
+    font-size: 26px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.content {
-    padding: 8px;
+.header-link > a {
+    font-style: italic;
+    line-height: 1.2;
+    text-decoration: none;
 }
 
-.content-description {
-    margin-top: 30px;
-    font-size: 14.5px;
+.header-link {
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
-ul {
-    list-style-type: "→  ";
-  }
-
-small {
-    color: var(--accent2);
-}
-
-.bold {
-    font-weight: 900;
-}
-
-.highlight {
-    color: black;
-    font-weight: bolder;
-}
-
-h2 {
-    font-size: 16px;
-    margin-bottom: 25px;
+.header-link:hover {
+    background-color: var(--link-text);
+    color: var(--link-background);
 }
