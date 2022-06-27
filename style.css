@@ -1,57 +1,134 @@
-:root {
-    --text: #662D91;
-    --background: #FFFAFA;
-    --link-background: #FFFFFF;
-    --link-text: #0000FF;
-    --border: 3px dotted var(--text);
+@font-face {
+    font-family: "Apercu";
+    src: url("fonts/Apercu.woff");
+    font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Dank Mono';
-    src: url('./font/dank_mono.ttf') format('truetype') font-weight-normal,
-         url('./font/dank_mono_italic.ttf') format('truetype') font-italic;
-}
-
-body {
-    background-color: var(--background);
-    color: var(--text);
-    font-family: 'Dank Mono', 'Inconsolata', 'Courier', monospace;
-    font-size: 15px;
-    font-style: none;
-    margin: 70px;
-}
-
-a {
-    color: inherit;
+    font-family: "Apercu";
+    src: url("fonts/Apercu-MediumItalic.woff");
+    font-weight: 600;
     font-style: italic;
 }
 
-a:hover {
-    background-color: var(--link-text);
-    color: var(--link-background);
+@font-face {
+    font-family: "Apercu";
+    src: url("fonts/Apercu-Bold.woff");
+    font-weight: 800;
 }
 
-#name {
-    font-size: 26px;
-    margin-bottom: 10px;
-    width: 100%;
-    text-overflow: clip;
-    overflow: hidden;
-    white-space: nowrap;
+@font-face {
+    font-family: "Courier Prime";
+    src: url("fonts/courier_prime.ttf");
 }
 
-.header-link > a {
-    font-style: italic;
-    line-height: 1.2;
+html {
+    padding: 70px 120px;
+}
+
+/******************* Header formatting *******************/
+header {
+    text-align: center;
+    font-family: "Apercu";
+    color: #441A22;
+    margin-bottom: 70px;
+}
+
+header #middle {
+    font-family: "Courier Prime";
+    font-size: 20px;
+}
+
+header #left {
+    text-align: left;
+    padding-left: inherit -20px;
+}
+
+header #right {
+    text-align: right;
+    padding-right: inherit -20px;
+}
+
+header span {
+    margin: 0 20px;
+}
+
+header a {
+    color: #441A22;
+}
+
+header a:hover {
+    color: #441A22;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2.5px;
+}
+
+header a:visited {
+    color: #441A22;
     text-decoration: none;
 }
 
-.header-link {
-    display: inline-block;
-    margin-bottom: 10px;
+header a:active {
+    color: #441A22;
+    text-decoration: none;
 }
 
-.header-link:hover {
-    background-color: var(--link-text);
-    color: var(--link-background);
+body {
+    font-family: "Apercu";
+    font-size: 15px;
+    line-height: 22px;
+    color: #441A22;
+    background-color: #EFEFFF;
 }
+
+
+/******************* Biography *******************/
+#pic img {
+    width: 170px;
+    float: right;
+}
+
+#pic {
+    text-align: center;
+    padding-right: 40px;
+}
+
+#bio {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    padding-right: 60px;
+}
+
+#bio-row {
+    margin-bottom: 80px;
+}
+
+
+/******************* Publications *******************/
+#pubs {
+    font-family: "Courier Prime";
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.paper-title {
+    font-weight: 800;
+}
+
+.author-me {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.paper-row {
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.flex-child {
+    padding: 10px 25px;
+} 
