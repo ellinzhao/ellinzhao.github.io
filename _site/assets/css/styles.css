@@ -76,6 +76,34 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* End Sticky Footer */
 /* Style inspiration and settings adapted from https://github.com/jgthms/web-design-in-4-minutes*/
+@font-face {
+  font-family: "GT Alpina Tw Trial";
+  src: url("/assets/fonts/GT-Alpina-Typewriter-Regular-Trial.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Alpina Tw Trial";
+  src: url("/assets/fonts/GT-Alpina-Typewriter-Medium-Trial.otf") format("opentype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Alpina Tw Trial";
+  src: url("/assets/fonts/GT-Alpina-Typewriter-Bold-Trial.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Untitled Sans";
+  src: url("/assets/fonts/UntitledSans-Light.ttf") format("truetype");
+  font-weight: thin;
+  font-style: normal;
+}
+
 /* Base */
 html {
   font-size: 16px;

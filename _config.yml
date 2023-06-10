@@ -1,10 +1,10 @@
 # Site Specific Configuration
 name: ellinz
 description: A simple Jekyll theme
-url: https://example.com
-author: tajacks
-timezone: America/Toronto
-timezone_short: ET
+url: "https://ellinz.com"
+author: ellinz
+timezone: America/Los_Angeles
+timezone_short: PT
 
 # Keywords
 keywords: ['seo', 'key', 'words']
