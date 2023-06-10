@@ -16,6 +16,13 @@
 
 @font-face {
   font-family: "GT Alpina Tw Trial";
+  src: url("/assets/fonts/GT-Alpina-Typewriter-Medium-Italic-Trial.otf") format("opentype");
+  font-weight: medium;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Alpina Tw Trial";
   src: url("/assets/fonts/GT-Alpina-Typewriter-Bold-Trial.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
