@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="wrapper-header">
+            {% include header.html %}
+        </header>
+
+        <main class="wrapper-main">
+            <div class="main-content">
+            {{ content }}
+            </div>
+        </main>
+    </div>
+
+    <footer class="wrapper-footer">
+        {% include footer.html %}
+    </footer>
+</body>
+</html>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

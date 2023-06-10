@@ -1,0 +1,109 @@
+/* Style inspiration and settings adapted from https://github.com/jgthms/web-design-in-4-minutes*/
+
+@font-face {
+  font-family: "GT Alpina Tw Trial";
+  src: url("GT-Alpina-Typewriter-Regular-Trial.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Alpina Tw Trial";
+  src: url("GT-Alpina-Typewriter-Medium-Trial.otf") format("opentype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Alpina Tw Trial";
+  src: url("GT-Alpina-Typewriter-Bold-Trial.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Untitled Sans";
+  src: url("UntitledSans-Light.ttf") format("truetype");
+  font-weight: thin;
+  font-style: normal;
+}
+
+/* Base */
+html {
+  font-size: 16px;
+}
+
+/* 01 Font family */
+
+body {
+  font-family: "Untitled Sans";
+  font-weight: thin;
+}
+
+/* 03 Spacing */
+
+.padded {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  line-height: 30px;
+}
+
+.main-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  line-height: 20px;
+}
+
+div.main-content h2 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "GT Alpina Tw Trial";
+  font-weight: medium;
+}
+
+header {
+  line-height: 200%;
+  font-family: "GT Alpina Tw Trial";
+}
+
+header h1 {
+  font-style: italic;
+  display: inline;
+}
+
+/* 04 Color and contrast */
+
+body {
+  color: #403c42;
+  background-color: #f7f6f9de;
+}
+
+h1,
+h2,
+strong {
+  color: #578d22;
+}
+
+/* 05 Balance */
+
+code {
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+}
+
+/* 06 Primary color */
+
+a {
+  color: #464a4e;
+}
+
+/* 07 Secondary colors */
+
+h1,
+h2,
+strong {
+  font-weight: 500;
+}
