@@ -5,7 +5,7 @@
 }
 
 .post-content {
-  line-height: 35px;
+  line-height: 1.5;
   padding-bottom: 50px;
 }
 
@@ -17,4 +17,22 @@
 .post-content h2 {
   padding-bottom: 20px;
   padding-top: 20px;
+}
+
+img {
+  max-width: 80%;
+  max-height: 80%;
+
+  object-fit: contain;
+}
+
+.paper-title {
+  font-weight: bold;
+}
+
+.post-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 1.2;
 }

@@ -1,16 +1,17 @@
 ---
-layout: default
+layout: title_page
 title: about
 ---
 
-### About
-I am a Ph.D. student in the Department of Electrical Engineering at UCLA, and a NSF GRFP fellow.
-I'm broadly interested in computational imaging and computer vision research.
-Previously, I completed my undergraduate degree in EECS at UC Berkeley, and worked at Google and Whisper.ai.
-<div style="height:20px; width:100%; clear:both;"></div>
+I'm interested in (1) roles at the intersection of environmental sensing and computer science, and (2) technical and scientific communication roles—see my [portfolio]({% post_url 2025-12-23-portfolio %}) for writing examples!
 
-### Contact
-ellinz (at) ucla (dot) edu<br>
-[twitter](https://twitter.com/ellin_zhao)<br>
-[scholar](https://scholar.google.com/citations?user=twluPLEAAAAJ&hl=en&oi=sra)<br>
-[github](https://github.com/ellinzhao)<br>
+<br>
+
+<p style="margin-bottom: 10px">My past life...</p>
+- NSF GRFP recipient
+- NASA Jet Propulsion Laboratory (2024-2025)
+- UCLA Dept. of Electrical and Computer Engineering M.S. (2021-2024)
+- Whisper.ai, acquired by Meta (2020-2021)
+- Google (2019)
+- UC Berkeley Dept. of Electrical Engineering and Computer Sciences B.S. (2016-2020)
+<div style="height:20px; width:100%; clear:both;"></div>

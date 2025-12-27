@@ -1,1 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-10T12:48:59-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ellinz</title><subtitle>A simple Jekyll theme</subtitle><author><name>ellinz</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-12-26T21:58:58-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ellinz</title><subtitle>A simple Jekyll theme</subtitle><author><name>ellinz</name></author><entry><title type="html">Writing Portfolio</title><link href="http://localhost:4000/2025/12/23/portfolio.html" rel="alternate" type="text/html" title="Writing Portfolio" /><published>2025-12-23T00:00:00-08:00</published><updated>2025-12-23T00:00:00-08:00</updated><id>http://localhost:4000/2025/12/23/portfolio</id><content type="html" xml:base="http://localhost:4000/2025/12/23/portfolio.html"><![CDATA[<h2 id="science-writing">Science Writing</h2>
+
+<h3 id="oceanography">Oceanography</h3>
+<ul>
+    <li>
+        <div class="paper-title">Multi-satellite U-Net for high-resolution sea surface temperature reconstruction</div>
+        in review at <em>EGU Ocean Sciences</em>... <a href="https://doi.org/10.5194/egusphere-2025-4847" target="_blank">link↪</a>
+    </li>
+</ul>
+
+<h3 id="health-imaging">Health Imaging</h3>
+<ul>
+    <li>
+        <div class="paper-title">Equitable non-contact infrared thermography after solar loading using deep learning</div>
+        in review at <em>Scientific Reports (Nature Portfolio)</em>... <a href="https://arxiv.org/abs/2304.08832" target="_blank">link↪</a>
+    </li>
+    <li>
+        <div class="paper-title">Towards fair computational health imaging</div>
+        accepted <em>NSF GRFP</em> research proposal... <a href="https://drive.google.com/file/d/10B16AE8F41ElOB0Iw1GvBSzMCngcCkss/view?usp=sharing" target="_blank">link↪</a>
+    </li>
+</ul>
+
+<h3 id="conference-papers">Conference Papers</h3>
+<ul>
+    <li>
+        <div class="paper-title">Multi-sensor lensless imaging: synthetic large-format sensing with a disjoint sensor array</div>
+        published in the Proceedings of <em>Optica Computational Optical Sensing and Imaging (COSI)</em>... <a href="https://drive.google.com/file/d/1aRwlarsiDmux3Vs3aSQrwQx0MKoT_byS/view?usp=sharing" target="_blank">link↪</a>
+    </li>
+    <li>
+        <div class="paper-title">Interactive explanation for planning-based systems</div>
+        published in the Proceedings of <em>International Conference on Cyber-Physical Systems (ICCPS)</em>... <a href="https://drive.google.com/file/d/1shiZdkJd6v1ChenYIObhDp8bBNfsVWrV/view?usp=sharing" target="_blank">link↪</a>
+    </li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="technical-graphics">Technical Graphics</h2>
+<ul>
+    <li>
+        <div class="paper-title">Reconstruction of high-resolution sea surface temperature under clouds with a multi-temporal multi-satellite model</div>
+        presentation at <em>AGU Fall Meeting 2024</em>... <a href="https://drive.google.com/file/d/1c0RD3CuhRewAPB-_guwqo0j1BOGMXkl-/view?usp=sharing" target="_blank">link↪</a>
+    </li>
+    <li>
+        <div class="paper-title">Multi-sensor DiffuserCam: lensless imaging</div>
+        poster at <em>UC Berkeley Research Symposium</em>... <a href="https://drive.google.com/file/d/1hb6ZGlgA054GJqXz9Vn6SQzpYmbno9v5/view?usp=drive_link" target="_blank">link↪</a>
+    </li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="creative-writing">Creative Writing</h2>
+<ul>
+    <li>
+        <span class="paper-title">Sound and Silence in Kurosawa's <em>Cure</em></span>... <a href="https://drive.google.com/file/d/1qjCidFInAREoxGNk1WABKrFyYSi3M5pn/view?usp=sharing" target="_blank">link↪</a>
+    </li>
+</ul>]]></content><author><name>ellinz</name></author><summary type="html"><![CDATA[Science Writing]]></summary></entry><entry><title type="html">Film Pictures</title><link href="http://localhost:4000/2025/12/19/analog_photography.html" rel="alternate" type="text/html" title="Film Pictures" /><published>2025-12-19T00:00:00-08:00</published><updated>2025-12-19T00:00:00-08:00</updated><id>http://localhost:4000/2025/12/19/analog_photography</id><content type="html" xml:base="http://localhost:4000/2025/12/19/analog_photography.html"><![CDATA[<p>Sharing some photos I took with my Olympus Stylus point-and-shoot, and a disposable Fujifilm camera…</p>
+
+<p><br /></p>
+
+<p>When looking at film photos, I often think of “spirit photography”. In the 19th century, spirit photography was performed—intentionally or not—by capturing noise, double exposures, and transient <em>human</em> figures which appeared otherworldly in resulting photographs. The scientific process of creating photographs (i.e. use of chemicals for developing photos) lent empirical credibility to the interpretation that unintended phenomena in spirit photos were indeed spectres:</p>
+
+<blockquote>
+  <p>The idea that people, places, and objects could somehow leave behind—cause, in fact—their own images gave photography a key role as evidence… Essential to the belief system which photography engendered was the fact that the image was created by a physical process over which human craft exerted no decisive role. <br />
+ <br />
+     - Gunning, T. (1995). Phantom images and modern manifestations. In Petro, P., <em>Fugitive images: From photography to video</em> (pp. 42-72).</p>
+</blockquote>
+
+<p>Spirit photography, to me, highlights how digital images no longer hold the same credibility in documenting people, places and events. Modern interpretation of digital images is complex, but overall I appreciate how the process of capturing and processing film photos is more understandable than that of digital photos with complicated ISPs.</p>
+
+<p><br /></p>
+
+<p><img src="/assets/images/ColorPlus-8.jpg" alt="Golden Gate Park flowers" />
+<br />
+<img src="/assets/images/ColorPlus-6.jpg" alt="Golden Gate Park trees" />
+<br />
+<img src="/assets/images/ColorPlus-20.jpg" alt="Ocean Beach, SF" />
+<br />
+<img src="/assets/images/Asset0016.jpg" alt="Hiking somewhere in NorCal" />
+<br />
+<img src="/assets/images/Asset0020.jpg" alt="Rainbow in Berkeley, CA" /></p>]]></content><author><name>Ellin</name></author><summary type="html"><![CDATA[Sharing some photos I took with my Olympus Stylus point-and-shoot, and a disposable Fujifilm camera…]]></summary></entry></feed>

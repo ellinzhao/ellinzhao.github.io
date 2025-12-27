@@ -29,10 +29,45 @@
 }
 
 @font-face {
-  font-family: "Untitled Sans";
-  src: url("/assets/fonts/UntitledSans-Light.ttf") format("truetype");
-  font-weight: thin;
+  font-family: "Domaine Sans Text";
+  src: url("/assets/fonts/DomaineSansText-Regular.otf") format("opentype");
+  font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Domaine Sans Text";
+  src: url("/assets/fonts/DomaineSansText-Italic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Domaine Sans Text";
+  src: url("/assets/fonts/DomaineSansText-Medium.otf") format("opentype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Domaine Sans Text";
+  src: url("/assets/fonts/DomaineSansText-MediumItalic.otf") format("opentype");
+  font-weight: medium;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Domaine Sans Text";
+  src: url("/assets/fonts/DomaineSansText-Light.otf") format("opentype");
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Domaine Sans Text";
+  src: url("/assets/fonts/DomaineSansText-LightItalic.otf") format("opentype");
+  font-weight: light;
+  font-style: italic;
 }
 
 /* Base */
@@ -41,15 +76,13 @@ html {
 }
 
 /* 01 Font family */
-
 body {
-  font-family: "Untitled Sans";
-  font-weight: thin;
+  font-family: "Domaine Sans Text";
+  font-weight: lighter;
 }
 
 /* 03 Spacing */
-
-.padded {
+.padded {  // not needed?
   padding-top: 30px;
   padding-bottom: 30px;
   line-height: 30px;
@@ -58,7 +91,7 @@ body {
 .main-content {
   padding-top: 30px;
   padding-bottom: 30px;
-  line-height: 20px;
+  line-height: 1.25;
 }
 
 div.main-content h2 {
@@ -101,6 +134,11 @@ code {
   vertical-align: text-bottom;
 }
 
+blockquote {
+  color: #7e658b;
+  padding: 10px 0 10px 20px;
+}
+
 /* 06 Primary color */
 
 a {
@@ -113,4 +151,12 @@ h1,
 h2,
 strong {
   font-weight: 500;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  line-height: 1;
+  list-style-type: "> ";
 }

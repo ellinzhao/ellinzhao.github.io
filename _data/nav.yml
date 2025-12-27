@@ -1,6 +1,10 @@
 # - name: Categories
 #   link: /categories/
-- name: About
+- name: ABOUT
   link: /
-- name: Posts
+- name: CONTACT
+  link: /contact
+- name: POSTS
   link: /posts
+- name: CV
+  link: /CV
